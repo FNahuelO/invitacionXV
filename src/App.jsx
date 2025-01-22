@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="max-w-screen-md mx-auto h-svh">
+      <div className="max-w-screen-md mx-auto h-svh overflow-x-hidden">
         <div className="w-full min-h-full bg-white flex flex-col justify-center relative items-center">
           <img src={gif} className="absolute z-20 w-44 lg:w-50 left-0 -translate-y-1/2" />
           <img src={gif} className="absolute z-20 w-44 lg:w-50 right-0 translate-y-1/2" />
