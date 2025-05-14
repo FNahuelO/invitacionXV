@@ -108,7 +108,7 @@ function App() {
           </div>
           <MediaPlayer />
         </div>
-        <div className={`w-full h-[${screenHeight > 850 ? '110svh' : '130svh'}] bg-[#8C7299] translate-y-10 rounded-[3rem] z-10 relative flex flex-col justify-center items-center`}>
+        <div className={`w-full h-[${screenHeight > 850 ? '110svh' : '140svh'}] bg-[#8C7299] translate-y-10 rounded-[3rem] z-10 relative flex flex-col justify-center items-center`}>
           <div
             className="w-[80%] h-[92.5%] mx-auto border-2 absolute"
             style={{
