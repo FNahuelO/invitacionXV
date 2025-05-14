@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Sol from "./assets/Sol.jsx";
 import Vestido from "./assets/Vestido.jsx";
 import CarouselComponent from "./components/Carousel.jsx";
@@ -18,6 +18,7 @@ const ALIAS = "REGALOMIA15.UALA";
 
 function App() {
   const [modal, setModal] = useState({ view: false, type: "" });
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
   const [textCopy, setTextCopy] = useState("");
   const labelFooter = [
     "CONFIRMAR ASISTENCIA A LA FIESTA",
@@ -26,6 +27,16 @@ function App() {
     "CÓMO LLEGAR",
     "AGENDAR FIESTA",
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenHeight(window.innerHeight);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "5491158017866"; // Número de teléfono con código de país
@@ -97,7 +108,7 @@ function App() {
           </div>
           <MediaPlayer />
         </div>
-        <div className="w-full h-[110dvh] bg-[#8C7299] translate-y-10 rounded-[3rem] z-10 relative flex flex-col justify-center items-center">
+        <div className={`w-full h-[${screenHeight > 850 ? '110svh' : '130svh'}] bg-[#8C7299] translate-y-10 rounded-[3rem] z-10 relative flex flex-col justify-center items-center`}>
           <div
             className="w-[80%] h-[92.5%] mx-auto border-2 absolute"
             style={{
