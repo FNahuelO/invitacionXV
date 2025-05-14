@@ -223,7 +223,7 @@ const CarouselDots = () => {
           width: "8px",
           height: "8px",
           borderRadius: "50%",
-          backgroundColor: index === selectedIndex ? "#C89A0F" : "white",
+          backgroundColor: index === selectedIndex ? "#82638C" : "#FFEBEB",
         }}
         onClick={() => api && api.scrollTo(index)}
       />

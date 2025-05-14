@@ -11,6 +11,11 @@ export default {
         monteCarlo: ["MonteCarlo", "serif"],
         parisienne: ["Parisienne", "serif"],
         purple: ["Purple Purse", "serif"],
+        tinos: ["Tinos", "serif"],
+        berkshire: ["Berkshire Swash", "serif"],
+        carattere: ["Carattere", "serif"],
+        buenard: ["Buenard", "serif"],
+        david: ["David Libre", "serif"],
       },
       textShadow: {
         sm: "1px 1px 2px rgba(0, 0, 0, 0.5)",
