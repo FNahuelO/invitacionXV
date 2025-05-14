@@ -187,7 +187,7 @@ function App() {
                   <Traje />
                 </div>
                 <span className="text-[#4A6360BF] text-sm font-david">
-                  Vestimenta: Elegante
+                  Vestimenta: Elegante sport
                 </span>
               </div>
               <div className="min-w-72 h-full lg:min-w-[70%] bg-white rounded-2xl "></div>
