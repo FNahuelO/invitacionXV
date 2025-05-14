@@ -35,8 +35,8 @@ function App() {
     <>
       <div className="max-w-screen-md mx-auto h-svh overflow-x-hidden bg-[#704D7B] scroll-smooth">
         <div className="w-full h-[150svh] bg-[#704D7B] flex flex-col justify-center relative items-center gap-4">
-          <FlorHome className="absolute top-0 w-full h-max" />
-          <FlorHome2 className="absolute -bottom-10 w-full h-max" />
+          <FlorHome className="absolute top-0 w-full h-max pointer-events-none" />
+          <FlorHome2 className="absolute -bottom-10 w-full h-max pointer-events-none" />
           <div className="w-full flex flex-col items-center -translate-y-20 gap-4">
             <Sol />
             <span
@@ -111,7 +111,12 @@ function App() {
                   </span>
                   <button
                     className="bg-white text-[#D28A58] rounded-2xl px-8 py-2 uppercase font-alegreya font-bold text-xs w-full"
-                    onClick={handleWhatsAppClick}
+                    onClick={() =>
+                      window.open(
+                        "https://www.google.com/calendar/render?action=TEMPLATE&text=Mis%2015%20A%C3%B1os&dates=20250801T230000Z/20250802T040000Z&details=Estás%20invitado%20a%20una%20noche%20inolvidable%20para%20celebrar.&location=Janos%20Martínez&sf=true&output=xml",
+                        "_blank"
+                      )
+                    }
                   >
                     Agendar
                   </button>
@@ -158,7 +163,6 @@ function App() {
         </div>
         <div
           className="w-full min-h-[110svh] bg-[#82638C] flex flex-col justify-center"
-          id="book"
         >
           <div className="flex flex-col h-[90vh] justify-start items-center gap-8">
             <span
@@ -212,7 +216,10 @@ function App() {
             <CarouselComponent />
           </div>
         </div>
-        <div className="w-full min-h-full bg-[#FFFFFF47] flex flex-col justify-center items-center gap-14 relative" id="regalos">
+        <div
+          className="w-full min-h-full bg-[#FFFFFF47] flex flex-col justify-center items-center gap-14 relative"
+          id="regalos"
+        >
           <span className="font-monteCarlo text-shadow-lg text-white text-4xl">
             Regalos
           </span>
@@ -296,11 +303,21 @@ function App() {
                         <button
                           key={idx}
                           onClick={() => {
-                            setModal(true)
+                            setModal(true);
                           }}
                         >
                           {item}
                         </button>
+                      );
+                    } else if (item === "AGENDAR FIESTA") {
+                      return (
+                        <a
+                          href="https://www.google.com/calendar/render?action=TEMPLATE&text=Mis%2015%20A%C3%B1os&dates=20250801T230000Z/20250802T040000Z&details=Estás%20invitado%20a%20una%20noche%20inolvidable%20para%20celebrar.&location=Janos%20Martínez&sf=true&output=xml"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item}
+                        </a>
                       );
                     } else {
                       return (
