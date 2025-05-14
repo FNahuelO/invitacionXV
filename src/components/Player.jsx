@@ -31,7 +31,7 @@ const MediaPlayer = () => {
 
   return (
     <div className="flex flex-col items-center gap-3">
-      <audio ref={audioRef} src="src/assets/audio.mp3" preload="auto" />
+      <audio ref={audioRef} src="/audio.mp3" preload="auto" />
 
       <div className="flex items-center justify-center gap-6 p-4 rounded-md">
         <button

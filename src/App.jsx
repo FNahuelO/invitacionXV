@@ -33,11 +33,11 @@ function App() {
 
   return (
     <>
-      <div className="max-w-screen-md mx-auto h-svh overflow-x-hidden bg-[#704D7B]">
+      <div className="max-w-screen-md mx-auto h-svh overflow-x-hidden bg-[#704D7B] scroll-smooth">
         <div className="w-full h-[150svh] bg-[#704D7B] flex flex-col justify-center relative items-center gap-4">
-          <FlorHome className="absolute top-0" />
-          <FlorHome2 className="absolute -bottom-10" />
-          <div className="w-full flex flex-col items-center -translate-y-10 gap-4">
+          <FlorHome className="absolute top-0 w-full h-max" />
+          <FlorHome2 className="absolute -bottom-10 w-full h-max" />
+          <div className="w-full flex flex-col items-center -translate-y-20 gap-4">
             <Sol />
             <span
               className="text-xl"
@@ -173,8 +173,8 @@ function App() {
               Fiesta
             </span>
             <div className="flex gap-4 justify-center w-full h-[80%]">
-              <div className="min-w-72 h-full bg-white rounded-2xl"></div>
-              <div className="min-w-72 h-full bg-white rounded-2xl flex flex-col justify-evenly items-center">
+              <div className="min-w-72 h-full lg:min-w-[70%] bg-white rounded-2xl "></div>
+              <div className="min-w-72 h-full lg:min-w-[70%] bg-white rounded-2xl  flex flex-col justify-evenly items-center">
                 <span className="text-[#4A6360BF] text-3xl font-carattere">
                   Dress Code
                 </span>
@@ -186,7 +186,7 @@ function App() {
                   Vestimenta: Elegante
                 </span>
               </div>
-              <div className="min-w-72 h-full bg-white rounded-2xl"></div>
+              <div className="min-w-72 h-full lg:min-w-[70%] bg-white rounded-2xl "></div>
             </div>
             <span className="text-white font-buenard text-lg">
               Acá unos detalles a tener en cuenta
@@ -242,7 +242,7 @@ function App() {
         </div>
         <div className="w-full h-svh bg-[#704D7B] flex flex-col justify-center">
           <div className="w-[90%] h-full relative border border-[#EAB000] mx-auto my-3 flex justify-center items-center">
-            <Bandera className="absolute -top-2 z-10 w-44 h-44" />
+            <Bandera className="absolute -top-2 z-10 w-44 h-44 pointer-events-none" />
             <div className="w-[95%] h-[98%] relative border border-[#EAB000] flex flex-col justify-center items-center">
               <div className="flex flex-col items-center translate-y-[10%] gap-10">
                 <div className="flex flex-col justify-center items-center">
@@ -269,7 +269,7 @@ function App() {
                     mis 15 años
                   </span>
                 </div>
-                <div className="w-full flex flex-col gap-4 text-white text-center font-bold font-buenard text-sm">
+                <div className="w-full flex flex-col gap-4 text-white text-center font-bold font-buenard text-sm z-50">
                   {labelFooter.map((item, idx) => {
                     if (item === "BOOK DE FOTOS") {
                       return (
@@ -293,25 +293,24 @@ function App() {
                       );
                     } else if (item === "CÓMO LLEGAR") {
                       return (
-                        <span
+                        <button
                           key={idx}
                           onClick={() => {
-                            console.log("asdas");
+                            setModal(true)
                           }}
-                          style={{ cursor: "pointer" }}
                         >
                           {item}
-                        </span>
+                        </button>
                       );
                     } else {
                       return (
-                        <span
+                        <button
                           key={idx}
                           onClick={handleWhatsAppClick}
                           style={{ cursor: "pointer" }}
                         >
                           {item}
-                        </span>
+                        </button>
                       );
                     }
                   })}
@@ -330,8 +329,8 @@ function App() {
                 <div className="w-1 h-1 bg-[#C89A0F] rounded-full"></div>
               </div>
               <div className="absolute bottom-20 w-full flex items-center justify-around"></div>
-              <Flor className="absolute right-0 bottom-0" />
-              <Torre2 className="absolute -left-4 bottom-0" />
+              <Flor className="absolute right-0 bottom-0 pointer-events-none" />
+              <Torre2 className="absolute -left-4 bottom-0 pointer-events-none" />
             </div>
           </div>
         </div>
