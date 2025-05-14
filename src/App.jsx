@@ -12,9 +12,13 @@ import Bandera from "./assets/Bandera.jsx";
 import FlorHome from "./assets/FlorHome.jsx";
 import FlorHome2 from "./assets/FlorHome2.jsx";
 import MediaPlayer from "./components/Player.jsx";
+import { Copy } from "lucide-react";
+
+const ALIAS = "REGALOMIA15.UALA";
 
 function App() {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState({ view: false, type: "" });
+  const [textCopy, setTextCopy] = useState("");
   const labelFooter = [
     "CONFIRMAR ASISTENCIA A LA FIESTA",
     "BOOK DE FOTOS",
@@ -29,6 +33,19 @@ function App() {
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
 
     window.open(url, "_blank");
+  };
+
+  const handleCopy = async () => {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(ALIAS);
+      setTextCopy("Alias copiado al portapapeles ✔️");
+      setTimeout(() => {
+        setTextCopy("");
+        setModal({ view: false, type: "" });
+      }, 1500);
+    } else {
+      setTextCopy("No se pudo copiar el alias");
+    }
   };
 
   return (
@@ -144,7 +161,7 @@ function App() {
                   </span>
                   <button
                     className="bg-white text-[#D28A58] rounded-2xl px-8 py-2 uppercase font-alegreya font-bold text-xs w-full"
-                    onClick={() => setModal(true)}
+                    onClick={() => setModal({ view: true, type: "map" })}
                   >
                     Como llegar
                   </button>
@@ -161,9 +178,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div
-          className="w-full min-h-[110svh] bg-[#82638C] flex flex-col justify-center"
-        >
+        <div className="w-full min-h-[110svh] bg-[#82638C] flex flex-col justify-center">
           <div className="flex flex-col h-[90vh] justify-start items-center gap-8">
             <span
               className="font-monteCarlo text-shadow-lg text-white text-4xl"
@@ -241,7 +256,7 @@ function App() {
           </span>
           <button
             className="bg-white text-[#D28A58] rounded-2xl px-8 py-2 uppercase font-alegreya font-bold text-xs"
-            //onClick={handleWhatsAppClick}
+            onClick={() => setModal({ view: true, type: "cbu" })}
           >
             Ver más
           </button>
@@ -303,7 +318,7 @@ function App() {
                         <button
                           key={idx}
                           onClick={() => {
-                            setModal(true);
+                            setModal({ view: true, type: "map" });
                           }}
                         >
                           {item}
@@ -351,24 +366,42 @@ function App() {
             </div>
           </div>
         </div>
-        {modal && (
-          <div className="fixed inset-0 bg-black/80 z-20 flex items-center justify-center">
-            <div className="bg-white p-4 rounded-lg shadow-lg relative h-11/12">
-              <button
-                className="absolute top-0 right-1 text-black text-xl"
-                onClick={() => setModal(false)}
-              >
-                &times;
-              </button>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.4063993332325!2d-58.51372732347435!3d-34.492579951638646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0550248cff3%3A0x94edbaa9edf4190b!2sJanos%20Mart%C3%ADnez.!5e0!3m2!1ses-419!2sar!4v1747242359648!5m2!1ses-419!2sar"
-                height="600"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg py-4"
-              ></iframe>
-            </div>
+        {modal.view && (
+          <div className="fixed inset-0 bg-[#704D7B] z-20 flex items-center justify-center">
+            {modal.type === "map" ? (
+              <div className="bg-white p-4 rounded-lg shadow-lg relative h-11/12">
+                <button
+                  className="absolute top-0 right-1 text-black text-xl"
+                  onClick={() => setModal({ view: false, type: "" })}
+                >
+                  &times;
+                </button>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.4063993332325!2d-58.51372732347435!3d-34.492579951638646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0550248cff3%3A0x94edbaa9edf4190b!2sJanos%20Mart%C3%ADnez.!5e0!3m2!1ses-419!2sar!4v1747242359648!5m2!1ses-419!2sar"
+                  height="600"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg py-4"
+                ></iframe>
+              </div>
+            ) : (
+              <div className="bg-white rounded-lg shadow-lg relative h-11/12 px-16 py-16 flex  flex-col">
+                <button
+                  className="absolute top-1 right-3 text-black text-xl"
+                  onClick={() => setModal({ view: false, type: "" })}
+                >
+                  &times;
+                </button>
+                <div className="flex gap-4">
+                  <span>Alias: {ALIAS}</span>
+                  <Copy onClick={() => handleCopy()} />
+                </div>
+                <span className="text-xs text-center mt-4 text-green-700">
+                  {textCopy}
+                </span>
+              </div>
+            )}
           </div>
         )}
       </div>
