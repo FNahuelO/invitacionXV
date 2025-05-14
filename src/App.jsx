@@ -108,7 +108,7 @@ function App() {
           </div>
           <MediaPlayer />
         </div>
-        <div className={`w-full h-[${screenHeight > 850 ? '110svh' : '140svh'}] bg-[#8C7299] translate-y-10 rounded-[3rem] z-10 relative flex flex-col justify-center items-center`}>
+        <div className={`w-full h-[140vh] bg-[#8C7299] translate-y-10 rounded-[3rem] z-10 relative flex flex-col justify-center items-center`}>
           <div
             className="w-[80%] h-[92.5%] mx-auto border-2 absolute"
             style={{
@@ -117,7 +117,7 @@ function App() {
             }}
           ></div>
           <div
-            className="w-[85%] h-[90%] mx-auto border-2"
+            className="w-[85%] h-[90%] mx-auto border-2 flex items-center"
             style={{
               borderImage:
                 "linear-gradient(180deg, #967309 0%, #FFC000 49.04%, #FFAE2D 100%) 2",
