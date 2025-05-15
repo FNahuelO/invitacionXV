@@ -11,6 +11,7 @@ import Torre2 from "./assets/Torre2.jsx";
 import Bandera from "./assets/Bandera.jsx";
 import FlorHome from "./assets/FlorHome.jsx";
 import FlorHome2 from "./assets/FlorHome2.jsx";
+import Manga from "./assets/Mangas.jsx";
 import MediaPlayer from "./components/Player.jsx";
 import { Copy } from "lucide-react";
 
@@ -32,15 +33,15 @@ function App() {
     const handleResize = () => {
       setScreenHeight(window.innerHeight);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "5491158017866"; // Número de teléfono con código de país
-    const message = encodeURIComponent("¡Hola! Confirmo Asistencia");
+    const message = encodeURIComponent("Hola! Confirmo que voy asistir, mi nombre es:");
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
 
     window.open(url, "_blank");
@@ -108,7 +109,9 @@ function App() {
           </div>
           <MediaPlayer />
         </div>
-        <div className={`w-full h-[130vh] bg-[#8C7299] translate-y-10 rounded-[3rem] z-10 relative flex flex-col justify-center items-center`}>
+        <div
+          className={`w-full h-[150vh] bg-[#8C7299] translate-y-10 rounded-[3rem] z-10 relative flex flex-col justify-center items-center`}
+        >
           <div
             className="w-[80%] h-[92.5%] mx-auto border-2 absolute"
             style={{
@@ -123,7 +126,7 @@ function App() {
                 "linear-gradient(180deg, #967309 0%, #FFC000 49.04%, #FFAE2D 100%) 2",
             }}
           >
-            <div className="w-full flex flex-col items-center gap-4">
+            <div className="w-full flex flex-col items-center gap-4 -translate-y-10">
               <CountdownTimer />
               <span className="w-4/5 text-center text-white text-4xl text-shadow-lg font-monteCarlo">
                 Los esperamos
@@ -187,6 +190,7 @@ function App() {
 
               <div className="w-1.5 h-1.5 bg-[#C89A0F] rounded-full mt-6"></div>
             </div>
+            <Manga className="absolute bottom-14 right-12 w-20 h-20" />
           </div>
         </div>
         <div className="w-full min-h-[110svh] bg-[#82638C] flex flex-col justify-center">
@@ -262,8 +266,8 @@ function App() {
             </div>
           </div>
           <span className="text-white font-buenard w-[70%] text-center">
-            Queremos brindarles una gran noche y con su colaboracion nos
-            ayudarian a hacerlo posible
+            Si te gustaría sumarte a mi regalo soñado, acá podés dejar tu
+            aporte. ¡Gracias por el amor!
           </span>
           <button
             className="bg-white text-[#D28A58] rounded-2xl px-8 py-2 uppercase font-alegreya font-bold text-xs"
