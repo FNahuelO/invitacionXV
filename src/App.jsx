@@ -11,9 +11,9 @@ import Torre2 from "./assets/Torre2.jsx";
 import Bandera from "./assets/Bandera.jsx";
 import FlorHome from "./assets/FlorHome.jsx";
 import FlorHome2 from "./assets/FlorHome2.jsx";
-import Manga from "./assets/Mangas.jsx";
 import MediaPlayer from "./components/Player.jsx";
 import { Copy } from "lucide-react";
+import Curtain from "./components/Curtain.jsx";
 
 const ALIAS = "REGALOMIA15.UALA";
 
@@ -41,7 +41,9 @@ function App() {
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "5491158017866"; // Número de teléfono con código de país
-    const message = encodeURIComponent("Hola! Confirmo que voy asistir, mi nombre es:");
+    const message = encodeURIComponent(
+      "Hola! Confirmo que voy asistir, mi nombre es:"
+    );
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
 
     window.open(url, "_blank");
@@ -61,8 +63,8 @@ function App() {
   };
 
   return (
-    <>
-      <div className="max-w-screen-md mx-auto h-svh overflow-x-hidden bg-[#704D7B] scroll-smooth">
+    <Curtain>
+      <div className="max-w-screen-sm mx-auto h-svh overflow-x-hidden bg-[#704D7B] scroll-smooth transition-all">
         <div className="w-full h-[150svh] bg-[#704D7B] flex flex-col justify-center relative items-center gap-4">
           <FlorHome className="absolute top-0 w-full h-max pointer-events-none" />
           <FlorHome2 className="absolute -bottom-10 w-full h-max pointer-events-none" />
@@ -190,7 +192,6 @@ function App() {
 
               <div className="w-1.5 h-1.5 bg-[#C89A0F] rounded-full mt-6"></div>
             </div>
-            <Manga className="absolute bottom-14 right-12 w-20 h-20" />
           </div>
         </div>
         <div className="w-full min-h-[110svh] bg-[#82638C] flex flex-col justify-center">
@@ -420,7 +421,7 @@ function App() {
           </div>
         )}
       </div>
-    </>
+    </Curtain>
   );
 }
 
