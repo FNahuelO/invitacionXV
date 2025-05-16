@@ -402,7 +402,7 @@ function App() {
                 ></iframe>
               </div>
             ) : (
-              <div className="bg-white rounded-lg shadow-lg relative h-11/12 px-16 py-16 flex  flex-col">
+              <div className="bg-white rounded-lg shadow-lg relative h-11/12 px-12 py-10 flex  flex-col">
                 <button
                   className="absolute top-1 right-3 text-black text-xl"
                   onClick={() => setModal({ view: false, type: "" })}
