@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { event } from "@/lib/event";
 import { FadeIn } from "./FadeIn";
+import { StarSeparatorOverlay } from "./Divider";
 
 export function PhotoBook() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -28,9 +29,10 @@ export function PhotoBook() {
   return (
     <section
       id="book"
-      className="relative flex min-h-[90svh] flex-col items-center px-6 py-20 text-center"
+      className="relative flex min-h-svh flex-col items-center px-6 py-20 text-center"
     >
-      <FadeIn className="w-full">
+      <StarSeparatorOverlay />
+      <FadeIn className="relative z-10 w-full">
         <h2 className="font-serif text-5xl">Book</h2>
         <div className="relative mt-12">
           <div className="overflow-hidden" ref={emblaRef}>

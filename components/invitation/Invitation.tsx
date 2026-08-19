@@ -46,9 +46,15 @@ export function Invitation() {
           <Hero shouldPlay={musicShouldPlay} />
           <EventDetails onOpenMap={() => setModal("map")} />
           <DressCode />
-          <PhotoBook />
-          <Gifts onOpenAlias={() => setModal("cbu")} />
-          <Footer onOpenMap={() => setModal("map")} />
+          <div className="relative">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#010D23_0%,#375F91_43.75%,#4979B5_100%)]"
+            />
+            <PhotoBook />
+            {/* <Gifts onOpenAlias={() => setModal("cbu")} /> */}
+            <Footer onOpenMap={() => setModal("map")} />
+          </div>
         </div>
       </main>
 
