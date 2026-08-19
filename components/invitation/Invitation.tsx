@@ -7,7 +7,6 @@ import { Curtain } from "./Curtain";
 import { DressCode } from "./DressCode";
 import { EventDetails } from "./EventDetails";
 import { Footer } from "./Footer";
-import { Gifts } from "./Gifts";
 import { Hero } from "./Hero";
 import { MapModal } from "./MapModal";
 import { PhotoBook } from "./PhotoBook";
