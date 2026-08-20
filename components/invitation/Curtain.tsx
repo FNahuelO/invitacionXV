@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { event } from "@/lib/event";
+import { StarField } from "./StarField";
 
 type CurtainProps = {
   visible: boolean;
@@ -12,7 +12,7 @@ type CurtainProps = {
 export function Curtain({ visible, onOpen }: CurtainProps) {
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-night"
       initial={false}
       animate={
         visible
@@ -21,12 +21,15 @@ export function Curtain({ visible, onOpen }: CurtainProps) {
       }
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#010D23_0%,#1a3a6e_55%,#3a6aa3_100%)]"
-      />
+      <div className="pointer-events-none absolute inset-0">
+        <StarField />
+      </div>
 
-      <div className="relative flex min-h-svh w-full max-w-md flex-col items-center justify-center px-6 py-10">
+      <div className="relative z-10 flex min-h-svh w-full max-w-md flex-col items-center justify-center px-6 py-10 shadow-[0_0_80px_rgba(0,0,0,0.45)]">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#010D23_0%,#1a3a6e_55%,#3a6aa3_100%)]"
+        />
         <Image
           src="/images/vectores/estrellas-rsvp.svg"
           alt=""
@@ -47,7 +50,6 @@ export function Curtain({ visible, onOpen }: CurtainProps) {
         />
 
         <div className="relative z-10 flex flex-col items-center gap-8 text-center">
-
           <button
             type="button"
             onClick={onOpen}
