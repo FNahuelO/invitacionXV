@@ -44,8 +44,8 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
             <h3 className={`font-golden-hills text-2xl leading-none ${headingGradient}`}>
               Día
             </h3>
-            <p className="font-himalaya text-sm text-white/90">{event.weekdayLabel}</p>
-            <GhostButton href={event.calendarUrl} variant="event" className="text-sm font-tropical-avenue">
+            <p className="font-himalaya text-base text-white/90">{event.weekdayLabel}</p>
+            <GhostButton href={event.calendarUrl} variant="event" className="text-base font-tropical-avenue">
               Agendar
             </GhostButton>
           </div>
@@ -54,7 +54,7 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
             <h3 className={`font-golden-hills text-2xl leading-none ${headingGradient}`}>
               Lugar
             </h3>
-            <p className="font-himalaya text-sm text-white/90">{event.venue}</p>
+            <p className="font-himalaya text-base text-white/90">{event.venue}</p>
             <GhostButton
               onClick={onOpenRsvp}
               variant="event"
@@ -68,7 +68,7 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
             <h3 className={`font-golden-hills text-2xl leading-none ${headingGradient}`}>
               Dirección
             </h3>
-            <p className="font-himalaya text-sm text-white/90">{event.address}</p>
+            <p className="font-himalaya text-base text-white/90">{event.address}</p>
             <GhostButton onClick={onOpenMap} variant="event" className="text-sm font-tropical-avenue">
               Como llegar
             </GhostButton>
@@ -78,7 +78,7 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
             <h3 className={`font-golden-hills text-4xl leading-none ${headingGradient}`}>
               Horarios
             </h3>
-            <p className="font-serif text-sm text-white/90">
+            <p className="font-serif text-base text-white/90">
               <span className="font-golden-hills text-xl">Fiesta</span> {event.partyTime}
             </p>
           </div>

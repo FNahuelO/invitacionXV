@@ -46,7 +46,7 @@ export function Hero({ shouldPlay }: HeroProps) {
         <h1 className="mt-2 font-soligant text-5xl font-medium leading-none tracking-wide">
           {event.honoree}
         </h1>
-        <p className="mt-2 font-himalaya text-xl uppercase tracking-[0.2em] text-white/90">
+        <p className="mt-2 font-himalaya text-xl uppercase text-white/90">
           {event.subtitle}
         </p>
         <p className="mt-4 max-w-[13rem] font-soligant text-xs leading-relaxed text-white/85">
