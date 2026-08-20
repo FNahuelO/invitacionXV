@@ -26,11 +26,13 @@ export function Invitation() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = curtainOpen ? "hidden" : "";
+    const shouldLock = curtainOpen || modal !== null;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = shouldLock ? "hidden" : "";
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previous;
     };
-  }, [curtainOpen]);
+  }, [curtainOpen, modal]);
 
   return (
     <div className="relative min-h-svh bg-night text-white">
@@ -38,7 +40,7 @@ export function Invitation() {
         <StarField />
       </div>
 
-      <main className="relative z-10 mx-auto min-h-svh max-w-md overflow-x-hidden bg-gradient-to-b from-[#050b18]/92 via-[#0b1d42]/90 to-[#2b5a9e]/92 shadow-[0_0_80px_rgba(0,0,0,0.45)]">
+      <main className="relative z-10 mx-auto min-h-svh max-w-md overflow-x-clip bg-gradient-to-b from-[#050b18]/92 via-[#0b1d42]/90 to-[#2b5a9e]/92 shadow-[0_0_80px_rgba(0,0,0,0.45)]">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <StarField />
         </div>

@@ -9,7 +9,12 @@ import { FadeIn } from "./FadeIn";
 import { StarSeparatorOverlay } from "./Divider";
 
 export function PhotoBook() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const canScroll = event.photos.length > 1;
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: canScroll,
+    active: canScroll,
+    watchDrag: canScroll,
+  });
   const [selected, setSelected] = useState(0);
 
   const onSelect = useCallback(() => {
@@ -43,7 +48,7 @@ export function PhotoBook() {
             className="pointer-events-none absolute left-1/2 top-0 z-0 h-auto w-[min(100%,24.625rem)] max-w-none -translate-x-1/2 -translate-y-1/3"
             aria-hidden
           />
-          <div className="relative z-10 overflow-hidden" ref={emblaRef}>
+          <div className="relative z-10 overflow-hidden touch-pan-y" ref={emblaRef}>
             <div className="flex">
               {event.photos.map((photo, index) => (
                 <div
@@ -77,35 +82,42 @@ export function PhotoBook() {
               ))}
             </div>
           </div>
-          <button
-            type="button"
-            aria-label="Foto anterior"
-            onClick={() => emblaApi?.scrollPrev()}
-            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/50 bg-black/20 p-2 text-white backdrop-blur-sm"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <button
-            type="button"
-            aria-label="Foto siguiente"
-            onClick={() => emblaApi?.scrollNext()}
-            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/50 bg-black/20 p-2 text-white backdrop-blur-sm"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
+          {canScroll ? (
+            <>
+              <button
+                type="button"
+                aria-label="Foto anterior"
+                onClick={() => emblaApi?.scrollPrev()}
+                className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/50 bg-black/20 p-2 text-white backdrop-blur-sm"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button
+                type="button"
+                aria-label="Foto siguiente"
+                onClick={() => emblaApi?.scrollNext()}
+                className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/50 bg-black/20 p-2 text-white backdrop-blur-sm"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+            </>
+          ) : null}
         </div>
-        <div className="mt-8 flex justify-center gap-1.5">
-          {event.photos.map((photo, index) => (
-            <button
-              key={photo.src}
-              type="button"
-              aria-label={`Ir a la foto ${index + 1}`}
-              onClick={() => emblaApi?.scrollTo(index)}
-              className={`h-1.5 rounded-full transition ${selected === index ? "w-5 bg-white" : "w-1.5 bg-white/40"
+        {canScroll ? (
+          <div className="mt-8 flex justify-center gap-1.5">
+            {event.photos.map((photo, index) => (
+              <button
+                key={photo.src}
+                type="button"
+                aria-label={`Ir a la foto ${index + 1}`}
+                onClick={() => emblaApi?.scrollTo(index)}
+                className={`h-1.5 rounded-full transition ${
+                  selected === index ? "w-5 bg-white" : "w-1.5 bg-white/40"
                 }`}
-            />
-          ))}
-        </div>
+              />
+            ))}
+          </div>
+        ) : null}
 
         <p className="mt-3 font-soligant text-lg text-white">
           {event.tagline}

@@ -59,7 +59,7 @@ export function Footer({ onOpenMap }: FooterProps) {
         alt=""
         width={394}
         height={271}
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-auto w-full translate-y-16 opacity-80"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-auto w-full opacity-80 "
         aria-hidden
       />
     </footer>
