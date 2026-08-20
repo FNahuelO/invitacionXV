@@ -32,10 +32,15 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "star-glow": {
+          "0%, 100%": { opacity: "0.2" },
+          "50%": { opacity: "1" },
+        },
       },
       animation: {
         twinkle: "twinkle 3.4s ease-in-out infinite",
         drift: "drift 7s ease-in-out infinite",
+        "star-glow": "star-glow 2.8s ease-in-out infinite",
       },
     },
   },

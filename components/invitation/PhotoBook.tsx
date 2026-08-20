@@ -40,14 +40,16 @@ export function PhotoBook() {
       <FadeIn className="relative z-10 w-full">
         <h2 className="font-soligant text-5xl mt-16">Book</h2>
         <div className="relative mt-12">
-          <Image
-            src="/images/vectores/estrella-book.svg"
-            alt=""
-            width={494}
-            height={294}
-            className="pointer-events-none absolute left-1/2 top-0 z-0 h-auto w-[min(100%,24.625rem)] max-w-none -translate-x-1/2 -translate-y-1/3"
-            aria-hidden
-          />
+          <div className="pointer-events-none absolute left-1/2 top-0 z-0 w-[min(100%,24.625rem)] -translate-x-1/2 -translate-y-1/3">
+            <Image
+              src="/images/vectores/estrella-book.svg"
+              alt=""
+              width={494}
+              height={294}
+              className="h-auto w-full max-w-none animate-star-glow"
+              aria-hidden
+            />
+          </div>
           <div className="relative z-10 overflow-hidden touch-pan-y" ref={emblaRef}>
             <div className="flex">
               {event.photos.map((photo, index) => (
