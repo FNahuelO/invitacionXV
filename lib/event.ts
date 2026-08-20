@@ -25,9 +25,9 @@ export const event = {
     message: "Hola! Confirmo que voy asistir, mi nombre es:",
   },
   calendarUrl:
-    "https://www.google.com/calendar/render?action=TEMPLATE&text=Mis%2015%20A%C3%B1os&dates=20250801T230000Z/20250802T040000Z&details=Estás%20invitado%20a%20una%20noche%20inolvidable%20para%20celebrar.&location=Janos%20Martínez&sf=true&output=xml",
+    "https://www.google.com/calendar/render?action=TEMPLATE&text=Mis%2015%20A%C3%B1os%20Zoe&dates=20261030T230000Z/20261031T070000Z&details=Te%20espero%20para%20celebrar%20este%20momento%20tan%20especial%20con%20vos&location=Infinity%20Eventos%2C%20Dardo%20Rocha%201708%2C%20Mart%C3%ADnez&sf=true&output=xml",
   mapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.4063993332325!2d-58.51372732347435!3d-34.492579951638646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0550248cff3%3A0x94edbaa9edf4190b!2sJanos%20Mart%C3%ADnez.!5e0!3m2!1ses-419!2sar!4v1747242359648!5m2!1ses-419!2sar",
+    "https://www.google.com/maps?q=Infinity+Eventos,+Dardo+Rocha+1708,+Martinez,+Buenos+Aires&z=16&output=embed",
   photos: [
     { src: "/images/book/book-main.jpg", alt: "Zoe — book de fotos 1" },
 
