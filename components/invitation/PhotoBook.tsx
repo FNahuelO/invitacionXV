@@ -33,30 +33,46 @@ export function PhotoBook() {
     >
       <StarSeparatorOverlay />
       <FadeIn className="relative z-10 w-full">
-        <h2 className="font-serif text-5xl">Book</h2>
+        <h2 className="font-soligant text-5xl mt-16">Book</h2>
         <div className="relative mt-12">
-          <div className="overflow-hidden" ref={emblaRef}>
+          <Image
+            src="/images/vectores/estrella-book.svg"
+            alt=""
+            width={494}
+            height={294}
+            className="pointer-events-none absolute left-1/2 top-0 z-0 h-auto w-[min(100%,24.625rem)] max-w-none -translate-x-1/2 -translate-y-1/3"
+            aria-hidden
+          />
+          <div className="relative z-10 overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {event.photos.map((photo, index) => (
                 <div
                   key={photo.src}
                   className="min-w-0 shrink-0 grow-0 basis-full px-8"
                 >
-                  <figure
-                    className={`mx-auto w-full max-w-[16.5rem] bg-white p-3 pb-12 shadow-[0_18px_40px_rgba(0,0,0,0.35)] ${
-                      index % 2 === 0 ? "-rotate-2" : "rotate-2"
-                    }`}
-                  >
-                    <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#dce6f5]">
-                      <Image
-                        src={photo.src}
-                        alt={photo.alt}
-                        fill
-                        className="object-cover"
-                        sizes="264px"
-                      />
+                  <div className="relative mx-auto w-full max-w-[16.5rem]">
+                    <div className="bg-[linear-gradient(180deg,#666_0%,#fff_34.62%,#666_100%)] p-[2px] shadow-[0_18px_40px_rgba(0,0,0,0.35)]">
+                      <figure className="bg-white p-3 pb-12">
+                        <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#dce6f5]">
+                          <Image
+                            src={photo.src}
+                            alt={photo.alt}
+                            fill
+                            className="object-cover"
+                            sizes="264px"
+                          />
+                        </div>
+                      </figure>
                     </div>
-                  </figure>
+                    <Image
+                      src="/images/vectores/estrella.svg"
+                      alt=""
+                      width={14}
+                      height={14}
+                      className="pointer-events-none absolute left-0 top-[38%] z-10 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2"
+                      aria-hidden
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -85,16 +101,13 @@ export function PhotoBook() {
               type="button"
               aria-label={`Ir a la foto ${index + 1}`}
               onClick={() => emblaApi?.scrollTo(index)}
-              className={`h-1.5 rounded-full transition ${
-                selected === index ? "w-5 bg-white" : "w-1.5 bg-white/40"
-              }`}
+              className={`h-1.5 rounded-full transition ${selected === index ? "w-5 bg-white" : "w-1.5 bg-white/40"
+                }`}
             />
           ))}
         </div>
-        <p className="mt-8 text-xs uppercase tracking-[0.35em] text-white/70">
-          {event.romanTitle}
-        </p>
-        <p className="mt-3 font-serif text-sm italic text-white/85">
+
+        <p className="mt-3 font-soligant text-lg text-white">
           {event.tagline}
         </p>
       </FadeIn>

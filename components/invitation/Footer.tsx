@@ -20,14 +20,14 @@ export function Footer({ onOpenMap }: FooterProps) {
     <footer className="relative flex min-h-svh flex-col items-center justify-center px-8 py-20 text-center">
       <StarSeparatorOverlay />
       <FadeIn className="relative z-10 flex flex-col items-center">
-        <div className="flex flex-col items-center -translate-y-16">
-          <h2 className="mt-4 font-serif text-5xl">{event.honoree}</h2>
-          <p className="mt-2 text-xs uppercase text-white/85">
+        <div className="flex flex-col items-center -translate-y-24">
+          <h2 className="mt-4 font-soligant text-5xl">{event.honoree}</h2>
+          <p className="mt-2 font-himalaya text-xs uppercase text-white/85">
             MIS 15 AÑOS
           </p>
         </div>
 
-        <nav className="mt-10 flex flex-col items-center gap-5 text-sm tracking-wide text-white/90">
+        <nav className="mt-10 flex flex-col items-center gap-8 text-sm tracking-wide text-white font-soligant -translate-y-16">
           {links.map((link) =>
             link.external ? (
               <a
@@ -50,7 +50,7 @@ export function Footer({ onOpenMap }: FooterProps) {
             onClick={onOpenMap}
             className="transition hover:text-white"
           >
-            Cómo llegar
+            Como llegar
           </button>
         </nav>
       </FadeIn>
@@ -59,7 +59,7 @@ export function Footer({ onOpenMap }: FooterProps) {
         alt=""
         width={394}
         height={271}
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-auto w-full"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-auto w-full translate-y-16 opacity-80"
         aria-hidden
       />
     </footer>

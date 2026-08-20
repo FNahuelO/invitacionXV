@@ -11,6 +11,10 @@ const config: Config = {
         serif: ["var(--font-playfair)", "Georgia", "serif"],
         sans: ["var(--font-montserrat)", "system-ui", "sans-serif"],
         script: ["var(--font-script)", "cursive"],
+        soligant: ["var(--font-soligant)", "Georgia", "serif"],
+        himalaya: ["var(--font-himalaya)", "Georgia", "serif"],
+        "golden-hills": ["var(--font-golden-hills)", "cursive"],
+        "tropical-avenue": ["var(--font-tropical-avenue)", "sans-serif"],
       },
       colors: {
         night: {

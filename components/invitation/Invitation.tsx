@@ -10,9 +10,10 @@ import { Footer } from "./Footer";
 import { Hero } from "./Hero";
 import { MapModal } from "./MapModal";
 import { PhotoBook } from "./PhotoBook";
+import { RsvpModal } from "./RsvpModal";
 import { StarField } from "./StarField";
 
-export type ModalKind = "map" | "cbu" | null;
+export type ModalKind = "map" | "cbu" | "rsvp" | null;
 
 export function Invitation() {
   const [curtainOpen, setCurtainOpen] = useState(true);
@@ -43,7 +44,10 @@ export function Invitation() {
         </div>
         <div className="relative z-10">
           <Hero shouldPlay={musicShouldPlay} />
-          <EventDetails onOpenMap={() => setModal("map")} />
+          <EventDetails
+            onOpenMap={() => setModal("map")}
+            onOpenRsvp={() => setModal("rsvp")}
+          />
           <DressCode />
           <div className="relative">
             <div
@@ -65,6 +69,9 @@ export function Invitation() {
         ) : null}
         {modal === "cbu" ? (
           <AliasModal onClose={() => setModal(null)} />
+        ) : null}
+        {modal === "rsvp" ? (
+          <RsvpModal onClose={() => setModal(null)} />
         ) : null}
       </AnimatePresence>
     </div>

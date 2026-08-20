@@ -28,19 +28,9 @@ export function Curtain({ visible, onOpen }: CurtainProps) {
       </div>
 
       <div className="relative flex flex-col items-center gap-8 px-6 text-center">
-        <div className="relative h-36 w-36 overflow-hidden rounded-full border border-white/40 shadow-[0_0_40px_rgba(120,170,255,0.35)]">
-          <Image
-            src={event.portraitSrc}
-            alt={event.honoree}
-            fill
-            className="object-cover"
-            sizes="144px"
-            priority
-          />
-        </div>
         <div>
-          <p className="font-serif text-5xl tracking-wide">{event.honoree}</p>
-          <p className="mt-2 text-xs uppercase tracking-[0.45em] text-white/80">
+          <p className="font-soligant text-5xl tracking-wide">{event.honoree}</p>
+          <p className="mt-2 font-himalaya text-lg uppercase tracking-[0.2em] text-white/80">
             {event.subtitle}
           </p>
         </div>

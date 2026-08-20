@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { event } from "@/lib/event";
 
@@ -61,9 +62,8 @@ export function Countdown() {
             {units.map((unit, index) => (
               <div
                 key={unit.key}
-                className={`flex min-w-[2.6rem] flex-col items-center px-1 ${
-                  index < units.length - 1 ? "border-r border-black/15" : ""
-                }`}
+                className={`flex min-w-[2.6rem] flex-col items-center px-1 ${index < units.length - 1 ? "border-r border-black/15" : ""
+                  }`}
               >
                 <span className="font-serif text-lg leading-none">
                   {pad(timeLeft[unit.key])}
@@ -76,6 +76,14 @@ export function Countdown() {
           </div>
         </div>
       </div>
+      <Image
+        src="/images/vectores/estrella.svg"
+        alt=""
+        width={14}
+        height={14}
+        className="pointer-events-none absolute right-[0.3rem] top-[2rem] z-10 h-8 w-8"
+        aria-hidden
+      />
     </div>
   );
 }
