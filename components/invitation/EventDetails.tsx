@@ -45,7 +45,7 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
               Día
             </h3>
             <p className="font-himalaya text-base text-white/90">{event.weekdayLabel}</p>
-            <GhostButton href={event.calendarUrl} variant="event" className="text-base font-tropical-avenue">
+            <GhostButton href={event.calendarUrl} variant="event" className="font-tropical-avenue text-base">
               Agendar
             </GhostButton>
           </div>
@@ -58,7 +58,7 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
             <GhostButton
               onClick={onOpenRsvp}
               variant="event"
-              className="font-tropical-avenue text-sm"
+              className="font-tropical-avenue text-base"
             >
               Confirmar asistencia
             </GhostButton>
@@ -69,7 +69,7 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
               Dirección
             </h3>
             <p className="font-himalaya text-base text-white/90">{event.address}</p>
-            <GhostButton onClick={onOpenMap} variant="event" className="text-sm font-tropical-avenue">
+            <GhostButton onClick={onOpenMap} variant="event" className="font-tropical-avenue text-base">
               Como llegar
             </GhostButton>
           </div>
