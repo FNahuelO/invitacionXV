@@ -72,8 +72,6 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
             </h3>
             <p className="font-himalaya text-base text-white/90">{event.address}</p>
             <GhostButton onClick={onOpenMap} variant="event" className="font-tropical-avenue text-base">
-            <p className="font-avegaer text-base text-white/90">{event.address}</p>
-            <GhostButton onClick={onOpenMap} variant="event" className="text-sm font-tropical-avenue">
               Como llegar
             </GhostButton>
           </div>
