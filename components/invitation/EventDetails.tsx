@@ -70,7 +70,7 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
             <h3 className={`font-avegaer text-3xl leading-none uppercase tracking-[0.06em] ${headingGradient}`}>
               Dirección
             </h3>
-            <p className="font-avegaer text-base text-white/90">{event.address}</p>
+            <p className="font-avegaer text-lg text-white/90">{event.address}</p>
             <GhostButton onClick={onOpenMap} variant="event" className="text-sm font-tropical-avenue">
               Como llegar
             </GhostButton>
@@ -80,8 +80,8 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
             <h3 className={`font-avegaer text-4xl leading-none uppercase tracking-[0.06em] ${headingGradient}`}>
               Horarios
             </h3>
-            <p className="font-serif text-base text-white/90">
-              <span className="font-avegaer text-xl">Fiesta</span> {event.partyTime}
+            <p className="font-avegaer text-lg text-white/90">
+              Fiesta: {event.partyTime}
             </p>
           </div>
         </div>

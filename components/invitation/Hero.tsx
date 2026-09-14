@@ -70,10 +70,10 @@ export function Hero({ shouldPlay }: HeroProps) {
         <p className={`font-avegaer text-2xl uppercase ${silverText}`}>
           {event.subtitle}
         </p>
-        <p className="hero-tagline mt-14 whitespace-nowrap font-avegaer text-base leading-snug">
+        <p className="hero-tagline mt-14 whitespace-nowrap font-avegaer text-base uppercase leading-snug">
           {event.taglineHero[0]}
           <br />
-          {event.taglineHero[1]}
+          <span className="text-xs">{event.taglineHero[1]}</span>
         </p>
         <div className="mt-5">
           <Divider className="w-28 gap-2" />

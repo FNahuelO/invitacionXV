@@ -24,8 +24,8 @@ export const event = {
   portraitSrc: "/images/portrait.png",
   dressSrc: "/images/vestido.svg",
   whatsapp: {
-    phone: "5491158017866",
-    message: "Hola! Confirmo que voy asistir, mi nombre es:",
+    phone: "5491126162278",
+    message: "Hola Zoe! Confirmo que voy asistir, mi nombre es:",
   },
   calendarUrl:
     "https://www.google.com/calendar/render?action=TEMPLATE&text=Mis%2015%20A%C3%B1os%20Zoe&dates=20261030T230000Z/20261031T070000Z&details=Te%20espero%20para%20celebrar%20este%20momento%20tan%20especial%20con%20vos&location=Infinity%20Eventos%2C%20Dardo%20Rocha%201708%2C%20Mart%C3%ADnez&sf=true&output=xml",
