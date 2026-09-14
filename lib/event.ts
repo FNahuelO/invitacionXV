@@ -32,7 +32,6 @@ export const event = {
   mapsEmbedUrl:
     "https://www.google.com/maps?q=Infinity+Eventos,+Dardo+Rocha+1708,+Martinez,+Buenos+Aires&z=16&output=embed",
   photos: [
-    { src: "/images/book/book-main.jpg", alt: "Zoe — book de fotos 1" },
     { src: "/images/book/IMG_5502.jpeg", alt: "Zoe — book de fotos 2" },
     { src: "/images/book/IMG_5503.jpeg", alt: "Zoe — book de fotos 3" },
     { src: "/images/book/IMG_5504.jpeg", alt: "Zoe — book de fotos 4" },
