@@ -13,14 +13,14 @@ export function Gifts({ onOpenAlias }: GiftsProps) {
   return (
     <section
       id="regalos"
-      className="relative flex min-h-svh flex-col items-center px-8 py-20 text-center"
+      className="relative flex min-h-svh flex-col items-center px-8 text-center"
     >
       <Image
-        src="/images/vectores/lluvia.svg"
+        src="/images/vectores/separator.svg"
         alt=""
         width={393}
         height={179}
-        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-auto w-full"
+        className="pointer-events-none absolute inset-x-0 -top-24 z-[1] h-auto w-full"
         aria-hidden
       />
 
@@ -40,7 +40,7 @@ export function Gifts({ onOpenAlias }: GiftsProps) {
           />
         </div>
 
-        <p className="mt-10 max-w-[16rem] font-avegaer text-sm leading-relaxed text-white/90">
+        <p className="mt-10 max-w-[16rem] font-avegaer text-sm leading-relaxed text-white/90 tracking-[0.04em]">
           {event.giftsMessage}
         </p>
 

@@ -41,7 +41,7 @@ export function Invitation() {
         <StarField />
       </div>
 
-      <main className="relative z-10 mx-auto min-h-svh max-w-md overflow-x-clip bg-gradient-to-b from-[#050b18]/92 via-[#0b1d42]/90 to-[#2b5a9e]/92 shadow-[0_0_80px_rgba(0,0,0,0.45)]">
+      <main className="relative z-10 mx-auto min-h-svh max-w-md overflow-x-clip e shadow-[0_0_80px_rgba(0,0,0,0.45)]">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <StarField />
         </div>
@@ -55,10 +55,10 @@ export function Invitation() {
           <div className="relative">
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#010D23_0%,#375F91_43.75%,#4979B5_100%)]"
+              className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#010D23_0%,#375F91_90%,#4979B5_100%)]"
             />
-            <Gifts onOpenAlias={() => setModal("cbu")} />
             <PhotoBook />
+            <Gifts onOpenAlias={() => setModal("cbu")} />
             <Footer onOpenMap={() => setModal("map")} />
           </div>
         </div>

@@ -18,7 +18,7 @@ export const event = {
   dressCode: "Elegante",
   dressCodeNote: "Acá unos detalles a tener en cuenta",
   giftsMessage:
-    "Queremos brindarles una gran noche y con su colaboración nos ayudarían a hacerlo posible",
+    "Compartir este momento con vos es lo que más deseo. Si querés hacerme un regalo, te dejo este espacio para que puedas hacerlo.",
   alias: "Zoe.2510",
   audioSrc: "/audio.mp3",
   portraitSrc: "/images/portrait.png",
