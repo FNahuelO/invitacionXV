@@ -25,7 +25,7 @@ export function Gifts({ onOpenAlias }: GiftsProps) {
       />
 
       <FadeIn className="relative z-10 flex flex-1 flex-col items-center justify-center">
-        <h2 className="heading-silver font-avegaer text-5xl uppercase tracking-[0.06em]">
+        <h2 className="heading-silver font-avegaer text-4xl tracking-[0.06em]">
           Regalos
         </h2>
 

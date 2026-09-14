@@ -49,7 +49,7 @@ export function Footer({ onOpenMap }: FooterProps) {
           </p>
         </div>
 
-        <nav className="mt-10 flex flex-col items-center gap-8 text-xl tracking-wide font-avegaer text-white -translate-y-16">
+        <nav className="mt-8 flex flex-col items-center gap-8 text-xl tracking-wide font-avegaer text-white -translate-y-16">
           {links.map((link) =>
             link.external ? (
               <a
@@ -81,7 +81,7 @@ export function Footer({ onOpenMap }: FooterProps) {
         alt=""
         width={394}
         height={271}
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-auto w-full opacity-80 "
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[clamp(11rem,42svh,17rem)] w-full object-cover object-bottom opacity-80"
         aria-hidden
       />
     </footer>
