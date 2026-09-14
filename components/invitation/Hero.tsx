@@ -53,7 +53,7 @@ export function Hero({ shouldPlay }: HeroProps) {
         >
           <span>Z</span>
           <span className="relative inline-flex items-center justify-center">
-            <span aria-hidden>O</span>
+            <span>O</span>
             <Image
               src="/images/estrella.svg"
               alt=""
