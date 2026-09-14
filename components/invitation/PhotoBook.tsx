@@ -80,20 +80,25 @@ export function PhotoBook() {
           </div>
           <div className="relative z-10 overflow-hidden touch-pan-y" ref={emblaRef}>
             <div className="flex">
-              {event.photos.map((photo, index) => (
+              {event.photos.map((photo) => (
                 <div
                   key={photo.src}
                   className="min-w-0 shrink-0 grow-0 basis-full px-8"
                 >
-                  <div className="relative mx-auto w-full max-w-[16.5rem]">
+                  <div className="relative mx-auto w-full max-w-[18rem]">
                     <div className="bg-[linear-gradient(180deg,#666_0%,#fff_34.62%,#666_100%)] p-[2px] shadow-[0_18px_40px_rgba(0,0,0,0.35)]">
-                      <figure className="bg-white p-3 pb-12">
-                        <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#dce6f5]">
+                      <figure className="bg-white p-2 pb-12">
+                        <div className="relative aspect-[3/4] w-full overflow-hidden bg-transparent">
                           <Image
                             src={photo.src}
                             alt={photo.alt}
                             fill
                             className="object-cover"
+                            style={
+                              "objectPosition" in photo
+                                ? { objectPosition: photo.objectPosition }
+                                : undefined
+                            }
                             sizes="264px"
                           />
                         </div>

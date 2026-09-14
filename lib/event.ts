@@ -3,11 +3,11 @@ export const event = {
   romanTitle: "XV",
   subtitle: "MIS 15 AÑOS",
   dateLabel: "30.10.2026",
-  weekdayLabel: "Sábado 30 de Octubre",
-  countdownTarget: "2026-10-30T20:00:00-03:00",
+  weekdayLabel: "Viernes 30 de Octubre",
+  countdownTarget: "2026-10-30T21:00:00-03:00",
   venue: "Infinity Eventos",
   address: "Dardo Rocha 1708",
-  partyTime: "20:00 hs",
+  partyTime: "21:00 hs",
   tagline:
     "Recuerdos que llevo conmigo",
   taglineHero: [
@@ -45,9 +45,17 @@ export const event = {
     { src: "/images/book/IMG_5512.jpeg", alt: "Zoe — book de fotos 12" },
     { src: "/images/book/IMG_5513.jpeg", alt: "Zoe — book de fotos 13" },
     { src: "/images/book/IMG_5576.jpeg", alt: "Zoe — book de fotos 14" },
-    { src: "/images/book/IMG_5579.jpeg", alt: "Zoe — book de fotos 15" },
-    { src: "/images/book/IMG_5580.jpeg", alt: "Zoe — book de fotos 16" },
-    { src: "/images/book/IMG_5582.jpeg", alt: "Zoe — book de fotos 17" },
+    { src: "/images/book/IMG_5580.jpeg", alt: "Zoe — book de fotos 15" },
+    {
+      src: "/images/book/IMG_5579.jpeg",
+      alt: "Zoe — book de fotos 16",
+      objectPosition: "70% 45%",
+    },
+    {
+      src: "/images/book/IMG_5582.jpeg",
+      alt: "Zoe — book de fotos 17",
+      objectPosition: "38% 36%",
+    },
   ],
 } as const;
 
