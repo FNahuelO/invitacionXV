@@ -53,7 +53,7 @@ export function Curtain({ visible, onOpen }: CurtainProps) {
           <button
             type="button"
             onClick={onOpen}
-            className="font-soligant text-3xl text-white transition hover:text-white/80"
+            className="font-avegaer text-3xl text-white transition hover:text-white/80"
           >
             Abrir
           </button>

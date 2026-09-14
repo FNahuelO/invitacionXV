@@ -25,12 +25,14 @@ export function Footer({ onOpenMap }: FooterProps) {
       <FadeIn className="relative z-10 flex flex-col items-center">
         <div className="flex flex-col items-center -translate-y-24">
           <h1
-            className="heading-silver flex items-center font-avegaer text-6xl font-medium uppercase leading-none tracking-wide [filter:drop-shadow(0px_4px_4px_#00000040)]"
+            className="flex items-center font-avegaer text-6xl font-medium uppercase leading-none tracking-wide [filter:drop-shadow(0px_4px_4px_#00000040)]"
             aria-label={event.honoree}
           >
-            <span>Z</span>
+            <span className="heading-silver">Z</span>
             <span className="relative inline-flex items-center justify-center">
-              <span aria-hidden>O</span>
+              <span className="heading-silver" aria-hidden>
+                O
+              </span>
               <Image
                 src="/images/estrella.svg"
                 alt=""
@@ -40,7 +42,7 @@ export function Footer({ onOpenMap }: FooterProps) {
                 aria-hidden
               />
             </span>
-            <span>E</span>
+            <span className="heading-silver">E</span>
           </h1>
           <p className={`mt-2 font-avegaer text-2xl uppercase ${silverText}`}>
             MIS 15 AÑOS

@@ -48,12 +48,14 @@ export function Hero({ shouldPlay }: HeroProps) {
 
       <FadeIn className="relative z-10 flex max-w-[18rem] flex-col items-center mt-[5rem]">
         <h1
-          className={`flex items-center font-avegaer text-6xl font-medium uppercase leading-none tracking-wide ${silverText}`}
+          className="flex items-center font-avegaer text-6xl font-medium uppercase leading-none tracking-wide"
           aria-label={event.honoree}
         >
-          <span>Z</span>
+          <span className={silverText}>Z</span>
           <span className="relative inline-flex items-center justify-center">
-            <span>O</span>
+            <span className={silverText} aria-hidden>
+              O
+            </span>
             <Image
               src="/images/estrella.svg"
               alt=""
@@ -63,7 +65,7 @@ export function Hero({ shouldPlay }: HeroProps) {
               aria-hidden
             />
           </span>
-          <span>E</span>
+          <span className={silverText}>E</span>
         </h1>
         <p className={`font-avegaer text-2xl uppercase ${silverText}`}>
           {event.subtitle}
