@@ -18,7 +18,7 @@ export function Hero({ shouldPlay }: HeroProps) {
     <section className="relative flex min-h-svh flex-col items-center justify-center px-8 py-16 text-center">
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
         <Image
-          src="/images/book/IMG_5576.jpeg"
+          src="/images/book/IMG_5502.jpeg"
           alt=""
           fill
           className="object-cover object-top"

@@ -32,30 +32,16 @@ export const event = {
   mapsEmbedUrl:
     "https://www.google.com/maps?q=Infinity+Eventos,+Dardo+Rocha+1708,+Martinez,+Buenos+Aires&z=16&output=embed",
   photos: [
-    { src: "/images/book/IMG_5502.jpeg", alt: "Zoe — book de fotos 2" },
-    { src: "/images/book/IMG_5503.jpeg", alt: "Zoe — book de fotos 3" },
-    { src: "/images/book/IMG_5504.jpeg", alt: "Zoe — book de fotos 4" },
-    { src: "/images/book/IMG_5505.jpeg", alt: "Zoe — book de fotos 5" },
-    { src: "/images/book/IMG_5506.jpeg", alt: "Zoe — book de fotos 6" },
-    { src: "/images/book/IMG_5507.jpeg", alt: "Zoe — book de fotos 7" },
-    { src: "/images/book/IMG_5508.jpeg", alt: "Zoe — book de fotos 8" },
-    { src: "/images/book/IMG_5509.jpeg", alt: "Zoe — book de fotos 9" },
-    { src: "/images/book/IMG_5510.jpeg", alt: "Zoe — book de fotos 10" },
-    { src: "/images/book/IMG_5511.jpeg", alt: "Zoe — book de fotos 11" },
-    { src: "/images/book/IMG_5512.jpeg", alt: "Zoe — book de fotos 12" },
-    { src: "/images/book/IMG_5513.jpeg", alt: "Zoe — book de fotos 13" },
-    { src: "/images/book/IMG_5576.jpeg", alt: "Zoe — book de fotos 14" },
-    { src: "/images/book/IMG_5580.jpeg", alt: "Zoe — book de fotos 15" },
-    {
-      src: "/images/book/IMG_5579.jpeg",
-      alt: "Zoe — book de fotos 16",
-      objectPosition: "70% 45%",
-    },
-    {
-      src: "/images/book/IMG_5582.jpeg",
-      alt: "Zoe — book de fotos 17",
-      objectPosition: "38% 36%",
-    },
+    { src: "/images/book/IMG_5502.jpeg", alt: "Zoe — book de fotos 1" },
+    { src: "/images/book/IMG_5503.jpeg", alt: "Zoe — book de fotos 2" },
+    { src: "/images/book/IMG_5505.jpeg", alt: "Zoe — book de fotos 3" },
+    { src: "/images/book/IMG_5506.jpeg", alt: "Zoe — book de fotos 4" },
+    { src: "/images/book/IMG_5507.jpeg", alt: "Zoe — book de fotos 5" },
+    { src: "/images/book/IMG_5508.jpeg", alt: "Zoe — book de fotos 6" },
+    { src: "/images/book/IMG_5509.jpeg", alt: "Zoe — book de fotos 7" },
+    { src: "/images/book/IMG_5511.jpeg", alt: "Zoe — book de fotos 8" },
+    { src: "/images/book/IMG_5513.jpeg", alt: "Zoe — book de fotos 9" },
+
   ],
 } as const;
 

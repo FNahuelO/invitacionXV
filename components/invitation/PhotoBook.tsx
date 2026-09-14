@@ -94,11 +94,6 @@ export function PhotoBook() {
                             alt={photo.alt}
                             fill
                             className="object-cover"
-                            style={
-                              "objectPosition" in photo
-                                ? { objectPosition: photo.objectPosition }
-                                : undefined
-                            }
                             sizes="264px"
                           />
                         </div>
