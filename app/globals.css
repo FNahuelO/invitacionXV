@@ -12,6 +12,13 @@ body {
   color: #ffffff;
 }
 
+/* Evita zoom automático de iOS al enfocar inputs */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
 .star-band {
   background-image: radial-gradient(
       1.5px 1.5px at 8% 40%,

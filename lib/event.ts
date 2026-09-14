@@ -24,7 +24,7 @@ export const event = {
   portraitSrc: "/images/portrait.png",
   dressSrc: "/images/vestido.svg",
   whatsapp: {
-    phone: "5491126162278",
+    phone: "5491121752567",
     message: "Hola Zoe! Confirmo que voy asistir, mi nombre es:",
   },
   calendarUrl:
@@ -68,11 +68,11 @@ export function whatsappUrl(options?: {
 
   if (name) {
     if (!attending) {
-      message = `Hola! Lamentablemente no puedo asistir, mi nombre es: ${name}`;
+      message = `Hola Zoe! Lamentablemente no puedo asistir, mi nombre es: ${name}`;
     } else if (options?.diet) {
-      message = `Hola! Confirmo que voy a asistir, mi nombre es: ${name}. Preferencia alimentaria: ${dietLabels[options.diet]}`;
+      message = `Hola Zoe! Confirmo que voy a asistir, mi nombre es: ${name}. Preferencia alimentaria: ${dietLabels[options.diet]}`;
     } else {
-      message = `Hola! Confirmo que voy a asistir, mi nombre es: ${name}`;
+      message = `Hola Zoe! Confirmo que voy a asistir, mi nombre es: ${name}`;
     }
   }
 

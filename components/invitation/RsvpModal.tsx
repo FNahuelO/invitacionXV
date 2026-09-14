@@ -189,7 +189,7 @@ export function RsvpModal({ onClose }: RsvpModalProps) {
                         placeholder="Ingresa tu nombre completo"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full border-0 border-b border-white/35 bg-transparent pb-1 text-center font-soligant text-sm text-white placeholder:text-white/85 focus:border-white/70 focus:outline-none"
+                        className="w-full border-0 border-b border-white/35 bg-transparent pb-1 text-center font-soligant text-base text-white placeholder:text-white/85 focus:border-white/70 focus:outline-none"
                       />
                     </label>
                   </motion.div>
