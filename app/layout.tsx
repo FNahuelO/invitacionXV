@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Montserrat, Great_Vibes } from "next/font/google";
+import {
+  Playfair_Display,
+  Montserrat,
+  Great_Vibes,
+  Alegreya_Sans,
+  Baloo_Bhai_2,
+} from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -19,6 +25,20 @@ const greatVibes = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-script",
+  display: "swap",
+});
+
+const alegreyaSans = Alegreya_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-alegreya-sans",
+  display: "swap",
+});
+
+const balooBhai = Baloo_Bhai_2({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-baloo-bhai",
   display: "swap",
 });
 
@@ -46,6 +66,12 @@ const tropicalAvenue = localFont({
   display: "swap",
 });
 
+const avegaer = localFont({
+  src: "./fonts/Avegaer.ttf",
+  variable: "--font-avegaer",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "XV Zoe",
   description:
@@ -63,7 +89,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${montserrat.variable} ${greatVibes.variable} ${soligant.variable} ${himalaya.variable} ${goldenHills.variable} ${tropicalAvenue.variable}`}
+      className={`${playfair.variable} ${montserrat.variable} ${greatVibes.variable} ${alegreyaSans.variable} ${balooBhai.variable} ${soligant.variable} ${himalaya.variable} ${goldenHills.variable} ${tropicalAvenue.variable} ${avegaer.variable}`}
     >
       <body className="font-sans antialiased">{children}</body>
     </html>

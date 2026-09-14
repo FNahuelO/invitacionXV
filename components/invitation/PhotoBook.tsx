@@ -38,7 +38,35 @@ export function PhotoBook() {
     >
       <StarSeparatorOverlay />
       <FadeIn className="relative z-10 w-full">
-        <h2 className="font-soligant text-5xl mt-16">Book</h2>
+        <h2
+          className="mt-16 flex items-center justify-center font-avegaer text-4xl uppercase leading-none tracking-wide text-white"
+          aria-label="Book"
+        >
+          <span>B</span>
+          <span className="relative inline-flex items-center justify-center">
+            <span aria-hidden>O</span>
+            <Image
+              src="/images/estrella.svg"
+              alt=""
+              width={10}
+              height={10}
+              className="pointer-events-none absolute left-1/2 top-[42%] z-10 h-2 w-2 -translate-x-1/2 -translate-y-1/2"
+              aria-hidden
+            />
+          </span>
+          <span className="relative inline-flex items-center justify-center">
+            <span aria-hidden>O</span>
+            <Image
+              src="/images/estrella.svg"
+              alt=""
+              width={10}
+              height={10}
+              className="pointer-events-none absolute left-1/2 top-[42%] z-10 h-2 w-2 -translate-x-1/2 -translate-y-1/2"
+              aria-hidden
+            />
+          </span>
+          <span>K</span>
+        </h2>
         <div className="relative mt-12">
           <div className="pointer-events-none absolute left-1/2 top-0 z-0 w-[min(100%,24.625rem)] -translate-x-1/2 -translate-y-1/3">
             <Image
@@ -113,15 +141,14 @@ export function PhotoBook() {
                 type="button"
                 aria-label={`Ir a la foto ${index + 1}`}
                 onClick={() => emblaApi?.scrollTo(index)}
-                className={`h-1.5 rounded-full transition ${
-                  selected === index ? "w-5 bg-white" : "w-1.5 bg-white/40"
-                }`}
+                className={`h-1.5 rounded-full transition ${selected === index ? "w-5 bg-white" : "w-1.5 bg-white/40"
+                  }`}
               />
             ))}
           </div>
         ) : null}
 
-        <p className="mt-3 font-soligant text-lg text-white">
+        <p className="mt-3 font-avegaer text-lg text-white">
           {event.tagline}
         </p>
       </FadeIn>

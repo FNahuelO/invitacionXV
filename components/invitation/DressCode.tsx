@@ -26,7 +26,7 @@ export function DressCode() {
       </div>
 
       <FadeIn className="relative z-10 flex w-full flex-col items-center">
-        <h2 className="font-tropical-avenue text-4xl">Fiesta</h2>
+        <h2 className="font-avegaer text-5xl">Fiesta</h2>
         <p className="mt-6 font-golden-hills text-3xl">{event.dressCodeLabel}</p>
         <div className="relative mt-10 h-44 w-44">
           <Image
@@ -37,7 +37,7 @@ export function DressCode() {
             sizes="176px"
           />
         </div>
-        <p className="mt-10 font-tropical-avenue text-4xl">{event.dressCode}</p>
+        <p className="mt-10 font-avegaer text-5xl">{event.dressCode}</p>
       </FadeIn>
     </section>
   );

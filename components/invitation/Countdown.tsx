@@ -57,7 +57,7 @@ export function Countdown() {
       <div className="absolute inset-0 rounded-full border border-white/30" />
       <div className="absolute inset-3 rounded-full border border-white/60 bg-white/95 text-[#1a2744] shadow-[0_0_40px_rgba(255,255,255,0.2)]">
         <div className="flex h-full flex-col items-center justify-center">
-          <p className="font-script text-3xl text-[#4a5a78]">Faltan</p>
+          <p className="font-avegaer text-3xl text-[#4a5a78]">Faltan</p>
           <div className="mt-3 flex">
             {units.map((unit, index) => (
               <div
@@ -65,10 +65,10 @@ export function Countdown() {
                 className={`flex min-w-[2.6rem] flex-col items-center px-1 ${index < units.length - 1 ? "border-r border-black/15" : ""
                   }`}
               >
-                <span className="font-serif text-lg leading-none">
+                <span className="font-baloo-bhai text-lg leading-none">
                   {pad(timeLeft[unit.key])}
                 </span>
-                <span className="mt-1 text-[10px] uppercase tracking-wider text-[#5b6b86]">
+                <span className="font-alegreya-sans text-[10px] uppercase tracking-wider text-[#5b6b86]">
                   {unit.label}
                 </span>
               </div>

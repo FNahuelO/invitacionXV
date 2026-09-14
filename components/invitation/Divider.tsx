@@ -3,16 +3,16 @@ import Image from "next/image";
 export function Divider({ className = "" }: { className?: string }) {
   return (
     <div className={`flex w-40 items-center gap-3 ${className}`}>
-      <span className="h-px flex-1 bg-white/70" />
+      <span className="h-px flex-1 bg-[linear-gradient(90deg,#737373_0%,#D9D9D9_52.88%,#737373_100%)]" />
       <Image
         src="/images/vectores/estrella.svg"
         alt=""
         width={14}
         height={14}
-        className="h-6 w-6 shrink-0"
+        className="h-6 w-6 shrink-0 opacity-90 brightness-125"
         aria-hidden
       />
-      <span className="h-px flex-1 bg-white/70" />
+      <span className="h-px flex-1 bg-[linear-gradient(90deg,#737373_0%,#D9D9D9_52.88%,#737373_100%)]" />
     </div>
   );
 }

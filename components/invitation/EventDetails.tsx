@@ -37,24 +37,26 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
 
       <FadeIn className="relative z-10 flex w-full flex-col items-center">
         <Countdown />
-        <h2 className="mt-10 font-soligant text-4xl">Los esperamos</h2>
+        <h2 className="heading-silver mt-10 font-avegaer text-4xl">
+          Los esperamos
+        </h2>
 
         <div className="mt-12 flex w-full max-w-xs flex-col gap-10">
           <div className="flex flex-col items-center gap-2">
-            <h3 className={`font-golden-hills text-2xl leading-none ${headingGradient}`}>
+            <h3 className={`font-avegaer text-3xl leading-none uppercase tracking-[0.06em] ${headingGradient}`}>
               Día
             </h3>
-            <p className="font-himalaya text-base text-white/90">{event.weekdayLabel}</p>
-            <GhostButton href={event.calendarUrl} variant="event" className="font-tropical-avenue text-base">
+            <p className="font-avegaer text-lg text-white/90">{event.weekdayLabel}</p>
+            <GhostButton href={event.calendarUrl} variant="event" className="text-base font-tropical-avenue">
               Agendar
             </GhostButton>
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <h3 className={`font-golden-hills text-2xl leading-none ${headingGradient}`}>
+            <h3 className={`font-avegaer text-3xl leading-none uppercase tracking-[0.06em] ${headingGradient}`}>
               Lugar
             </h3>
-            <p className="font-himalaya text-base text-white/90">{event.venue}</p>
+            <p className="font-avegaer text-lg text-white/90">{event.venue}</p>
             <GhostButton
               onClick={onOpenRsvp}
               variant="event"
@@ -65,21 +67,23 @@ export function EventDetails({ onOpenMap, onOpenRsvp }: EventDetailsProps) {
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <h3 className={`font-golden-hills text-2xl leading-none ${headingGradient}`}>
+            <h3 className={`font-avegaer text-3xl leading-none uppercase tracking-[0.06em] ${headingGradient}`}>
               Dirección
             </h3>
             <p className="font-himalaya text-base text-white/90">{event.address}</p>
             <GhostButton onClick={onOpenMap} variant="event" className="font-tropical-avenue text-base">
+            <p className="font-avegaer text-base text-white/90">{event.address}</p>
+            <GhostButton onClick={onOpenMap} variant="event" className="text-sm font-tropical-avenue">
               Como llegar
             </GhostButton>
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <h3 className={`font-golden-hills text-4xl leading-none ${headingGradient}`}>
+            <h3 className={`font-avegaer text-4xl leading-none uppercase tracking-[0.06em] ${headingGradient}`}>
               Horarios
             </h3>
             <p className="font-serif text-base text-white/90">
-              <span className="font-golden-hills text-xl">Fiesta</span> {event.partyTime}
+              <span className="font-avegaer text-xl">Fiesta</span> {event.partyTime}
             </p>
           </div>
         </div>

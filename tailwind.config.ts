@@ -15,6 +15,9 @@ const config: Config = {
         himalaya: ["var(--font-himalaya)", "Georgia", "serif"],
         "golden-hills": ["var(--font-golden-hills)", "cursive"],
         "tropical-avenue": ["var(--font-tropical-avenue)", "sans-serif"],
+        avegaer: ["var(--font-avegaer)", "Georgia", "serif"],
+        "alegreya-sans": ["var(--font-alegreya-sans)", "system-ui", "sans-serif"],
+        "baloo-bhai": ["var(--font-baloo-bhai)", "system-ui", "sans-serif"],
       },
       colors: {
         night: {

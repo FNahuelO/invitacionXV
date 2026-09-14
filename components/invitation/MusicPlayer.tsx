@@ -1,7 +1,7 @@
 "use client";
 
 import { SkipBack, SkipForward, Pause, Play } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { event } from "@/lib/event";
 
 type MusicPlayerProps = {
@@ -9,9 +9,16 @@ type MusicPlayerProps = {
   compact?: boolean;
 };
 
+const shadow = "[filter:drop-shadow(0px_4px_4px_#00000040)]";
+
 export function MusicPlayer({ shouldPlay = false, compact = false }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const gradientId = useId().replace(/:/g, "");
+  const paint = `url(#${gradientId})`;
+  const skipSize = compact ? "h-5 w-5" : "h-6 w-6";
+  const playIconSize = compact ? "h-[1.15rem] w-[1.15rem]" : "h-6 w-6";
+  const playBtnSize = compact ? "h-11 w-11" : "h-14 w-14";
 
   useEffect(() => {
     if (!shouldPlay) return;
@@ -44,39 +51,68 @@ export function MusicPlayer({ shouldPlay = false, compact = false }: MusicPlayer
   };
 
   return (
-    <div className={compact ? "flex items-center justify-center gap-4" : "flex items-center justify-center gap-6"}>
+    <div
+      className={
+        compact
+          ? "flex items-center justify-center gap-5"
+          : "flex items-center justify-center gap-7"
+      }
+    >
+      <svg width="0" height="0" aria-hidden className="absolute">
+        <defs>
+          <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#999999" />
+            <stop offset="50.48%" stopColor="#FFFFFF" />
+            <stop offset="100%" stopColor="#999999" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       <audio ref={audioRef} src={event.audioSrc} preload="auto" loop />
+
       <button
         type="button"
         aria-label="Retroceder 10 segundos"
         onClick={() => skip(-10)}
-        className="text-white/80 transition hover:text-white"
+        className={`transition hover:opacity-80 ${shadow}`}
       >
-        <SkipBack className={compact ? "h-4 w-4" : "h-5 w-5"} />
+        <SkipBack className={skipSize} fill={paint} stroke={paint} strokeWidth={1} />
       </button>
+
       <button
         type="button"
         aria-label={isPlaying ? "Pausar" : "Reproducir"}
         onClick={toggle}
-        className={
-          compact
-            ? "flex h-9 w-9 items-center justify-center rounded-full border border-white text-white transition hover:bg-white/10"
-            : "flex h-12 w-12 items-center justify-center rounded-full border border-white text-white transition hover:bg-white/10"
-        }
+        className={`relative flex items-center justify-center transition hover:opacity-90 ${shadow} ${playBtnSize}`}
       >
+        <svg
+          className="pointer-events-none absolute inset-0 h-full w-full"
+          viewBox="0 0 48 48"
+          fill="none"
+          aria-hidden
+        >
+          <circle
+            cx="24"
+            cy="24"
+            r="22.5"
+            stroke={paint}
+            strokeWidth="1.5"
+          />
+        </svg>
         {isPlaying ? (
-          <Pause className={compact ? "h-4 w-4" : "h-5 w-5"} />
+          <Pause className={playIconSize} fill={paint} stroke={paint} strokeWidth={1} />
         ) : (
-          <Play className={`${compact ? "h-4 w-4" : "h-5 w-5"} ml-0.5`} />
+          <Play className={`${playIconSize} ml-0.5`} fill={paint} stroke={paint} strokeWidth={1} />
         )}
       </button>
+
       <button
         type="button"
         aria-label="Avanzar 10 segundos"
         onClick={() => skip(10)}
-        className="text-white/80 transition hover:text-white"
+        className={`transition hover:opacity-80 ${shadow}`}
       >
-        <SkipForward className={compact ? "h-4 w-4" : "h-5 w-5"} />
+        <SkipForward className={skipSize} fill={paint} stroke={paint} strokeWidth={1} />
       </button>
     </div>
   );

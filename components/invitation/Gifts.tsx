@@ -1,10 +1,9 @@
 "use client";
 
-import { Gift } from "lucide-react";
+import Image from "next/image";
 import { event } from "@/lib/event";
 import { FadeIn } from "./FadeIn";
 import { GhostButton } from "./GhostButton";
-import { StarSeparatorOverlay } from "./Divider";
 
 type GiftsProps = {
   onOpenAlias: () => void;
@@ -16,17 +15,43 @@ export function Gifts({ onOpenAlias }: GiftsProps) {
       id="regalos"
       className="relative flex min-h-svh flex-col items-center px-8 py-20 text-center"
     >
-      <StarSeparatorOverlay />
-      <FadeIn className="relative z-10 flex flex-col items-center">
-        <h2 className="font-serif text-5xl">Regalos</h2>
-        <div className="mt-10 flex h-28 w-28 items-center justify-center rounded-full border border-white/70 bg-white/10 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
-          <Gift className="h-10 w-10" strokeWidth={1.25} />
+      <Image
+        src="/images/vectores/lluvia.svg"
+        alt=""
+        width={393}
+        height={179}
+        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-auto w-full"
+        aria-hidden
+      />
+
+      <FadeIn className="relative z-10 flex flex-1 flex-col items-center justify-center">
+        <h2 className="heading-silver font-avegaer text-5xl uppercase tracking-[0.06em]">
+          Regalos
+        </h2>
+
+        <div className="relative mt-12 h-[6.75rem] w-[7.25rem]">
+          <Image
+            src="/images/vectores/regalo.svg"
+            alt=""
+            fill
+            className="object-contain"
+            sizes="116px"
+            aria-hidden
+          />
         </div>
-        <p className="mt-8 max-w-xs text-sm leading-relaxed text-white/90">
+
+        <p className="mt-10 max-w-[16rem] font-avegaer text-sm leading-relaxed text-white/90">
           {event.giftsMessage}
         </p>
-        <div className="mt-8">
-          <GhostButton onClick={onOpenAlias}>Ver más</GhostButton>
+
+        <div className="mt-10">
+          <GhostButton
+            onClick={onOpenAlias}
+            variant="event"
+            className="font-avegaer text-base"
+          >
+            Ver más
+          </GhostButton>
         </div>
       </FadeIn>
     </section>

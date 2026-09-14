@@ -7,6 +7,7 @@ import { Curtain } from "./Curtain";
 import { DressCode } from "./DressCode";
 import { EventDetails } from "./EventDetails";
 import { Footer } from "./Footer";
+import { Gifts } from "./Gifts";
 import { Hero } from "./Hero";
 import { MapModal } from "./MapModal";
 import { PhotoBook } from "./PhotoBook";
@@ -56,8 +57,8 @@ export function Invitation() {
               aria-hidden
               className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#010D23_0%,#375F91_43.75%,#4979B5_100%)]"
             />
+            <Gifts onOpenAlias={() => setModal("cbu")} />
             <PhotoBook />
-            {/* <Gifts onOpenAlias={() => setModal("cbu")} /> */}
             <Footer onOpenMap={() => setModal("map")} />
           </div>
         </div>
