@@ -25,7 +25,7 @@ export function Hero({ shouldPlay }: HeroProps) {
           sizes="100vw"
           priority
         />
-        {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,11,24,0.35)_0%,rgba(5,11,24,0.55)_45%,rgba(5,11,24,0.75)_100%)]" /> */}
+        <div className="absolute inset-0 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(0,11,33,0)_0%,rgba(0,11,33,0.464087)_88.46%,rgba(0,11,33,0.49)_100%)]" />
       </div>
       <Image
         src="/images/estrellas-top.svg"
