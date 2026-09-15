@@ -17,6 +17,11 @@ export const event = {
   dressCodeLabel: "Dress Code",
   dressCode: "Elegante",
   dressCodeNote: "Acá unos detalles a tener en cuenta",
+  dressCodeNote2: [
+    "Los tonos azul y plateado están reservados para",
+    "la celebración. Te agradecemos elegir otros tonos",
+    "para acompañar la ocasión",
+  ],
   giftsMessage:
     "Compartir este momento con vos es lo que más deseo. Si querés hacerme un regalo, te dejo este espacio para que puedas hacerlo.",
   alias: "Zoe.2510",
